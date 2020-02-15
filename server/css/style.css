@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#matrix-bg {
+    background-color: black;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+#heading {
+    font-size: 80px;
+    text-align: center;
+    font-weight: bold;
+    font-style: oblique;
+    color: white;
+    position: relative
+}
+
+.container {
+    padding: 0 25%;
+    color: white;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0 25px 0;
+    display: inline-block;
+    border: none;
+    background: white;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+label {
+    font-size: 20px;
+    font-family: monospace;
+}
+
+button[type=submit] {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+button[type=submit]:hover {
+    background-color: #3e8e41;
+}
+
+button[type=submit]:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
