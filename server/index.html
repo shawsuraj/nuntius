@@ -10,24 +10,30 @@
     <canvas id="matrix-bg"></canvas>
     <h1 id="heading">NUNTIUS!</h1>
 
-    <form>
+    <form method="post" action=”mail.php”>
         <div class="container">
             <label>From: </label>
-            <input type="email">
+            <input type="email" name="fromemail">
             <br>
             <label>To: </label>
-            <input type="email">
+            <input type="email" name="toemail">
             <br>
             <label>Subject: </label>
-            <input type="text">
+            <input type="text" name="subject">
             <br>
             <label>Body: </label>
-            <textarea rows="8"></textarea>
+            <textarea rows="8" name="body"></textarea>
             <br>
-            <button type="submit" value="Submit">Submit</button>
+            <button type="submit" value="Send Email" onclick="sendEmail()">Submit</button>
+            <p>
         </div>
     </form>
+    
+    <?php include 'php/send.php';?>
 
     <!--Source : https://codepen.io/wefiy/pen/WPpEwo-->
     <script src="js/matrix.js"></script>
+    <!--SMTP-->
+    <!-- <script src="js/smtp.js"></script> -->
+    <!--<script src="https://smtpjs.com/v3/smtp.js"></script>-->
 </body></html>
