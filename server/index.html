@@ -6,11 +6,12 @@
 </head>
 
 <body>
-
     <canvas id="matrix-bg"></canvas>
     <h1 id="heading">NUNTIUS!</h1>
 
-    <form method="post" action=”mail.php”>
+    <!-- <?php include 'php/send.php';?> -->
+
+    <form method="post" action = "/php/mail.php">
         <div class="container">
             <label>From: </label>
             <input type="email" name="fromemail">
@@ -29,7 +30,7 @@
         </div>
     </form>
     
-    <?php include 'php/send.php';?>
+    
 
     <!--Source : https://codepen.io/wefiy/pen/WPpEwo-->
     <script src="js/matrix.js"></script>
