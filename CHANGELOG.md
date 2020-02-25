@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Backend PHP Code to send email.
 
-## [0.2.0] - 2020-02-15
+## [0.1.0] - 2020-02-15
 ### Added
 - Front End - Base Structure.
 
