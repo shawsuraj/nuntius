@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2020-02-25
+### Fixed
+- PHP & HTML bugs fixed.
+
 ## [0.2.0] - 2020-02-17
 ### Added
 - Backend PHP Code to send email.
@@ -15,6 +19,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Front End - Base Structure.
 
 
-[Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.2.0...HEAD
-[0.2.0]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/olivierlacan/keep-a-changelog/releases/tag/v0.1.0
+[Unreleased]: https://github.com/shawsuraj/nuntius/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/shawsuraj/nuntius/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/shawsuraj/nuntius/releases/tag/v0.1.0
