@@ -3,7 +3,7 @@
 Send email to anyone from anyone.
 
 <a href="https://github.com/shawsuraj/nuntius/releases">
-    <img title="GitHub version" src="https://img.shields.io/badge/Version-v1.0.0-brightgreen" >
+    <img title="GitHub version" src="https://img.shields.io/badge/Version-v1.1.0-brightgreen" >
 </a>
 
 ## Installing
@@ -18,7 +18,7 @@ Send email to anyone from anyone.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [blob/master/LICENSE](LICENSE.md) file for details
 
 ---
 
