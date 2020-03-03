@@ -4,6 +4,7 @@ Send email to anyone from anyone.
 
 <a href="https://github.com/shawsuraj/nuntius/releases">
     <img title="GitHub version" src="https://img.shields.io/badge/Version-v1.0.0-brightgreen" >
+</a>
 
 ## Installing
 

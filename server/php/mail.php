@@ -27,18 +27,40 @@ function checkString($string) {
   return true;
 }
 
+function sendMail($from_email, $to_email, $subject, $content) {
+  try {
+    $headers = "" .
+    "From: ".$from_email."\r\n".
+    "Reply-To: ".$from_email."\r\n" .
+    "X-Mailer: PHP/" . phpversion();
+    $headers .= 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+    @mail($to_email, $subject, $content, $headers);
+    
+    return "Sent Succesfuly";
+  } 
+  catch (Exception $e) { 
+    return "Error Occured";
+  }
+}
+
+function alert($message) {
+  echo '<script type="text/javascript">';
+  echo ' alert('.$message.')';  //not showing an alert box.
+  echo '</script>';
+
+}
+
+// Start
+
 if (isValid()) {
   $from_email = $_POST['fromemail']; // required
   $to_email = $_POST['toemail'];  // required
   $subject = $_POST['subject'];
   $content = $_POST['body'];  // required
 
-  $headers = "" .
-    "From: ".$from_email."\r\n".
-    "Reply-To: ".$from_email."\r\n" .
-    "X-Mailer: PHP/" . phpversion();
-  $headers .= 'MIME-Version: 1.0' . "\r\n";
-  $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-  @mail($to_email, $subject, $content, $headers);
+  $message = sendMail($from_email, $to_email, $subject, $content);
+  alert($message);
+  exit();
 }
 ?>
