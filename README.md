@@ -18,7 +18,7 @@ Send email to anyone from anyone.
 
 ## License
 
-This project is licensed under the MIT License - see the [blob/master/LICENSE](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](blob/master/LICENSE) file for details
 
 ---
 
