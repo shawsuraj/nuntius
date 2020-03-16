@@ -46,10 +46,10 @@ $ python3 nuntius.py
 ```
 
 ### Upcoming features
-[] Automate the config process.
-[] Log the sent emails.
-[] Upload files directly via ftp.
-[] Configure to use multiple server via single CLI.
+- [ ] Automate the config process.
+- [ ] Log the sent emails.
+- [ ] Upload files directly via ftp.
+- [ ] Configure to use multiple server via single CLI.
 
 
 ## Author
