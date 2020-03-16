@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2020-03-16
+### Added
+- CLI Support.
+
+### Fix
+- Charset in php.
+
 ## [1.1.0] - 2020-03-03
 ### Added
 - Sucess and error message.

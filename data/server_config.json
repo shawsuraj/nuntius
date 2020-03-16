@@ -1,0 +1,11 @@
+{
+  "isConfigured" : "False";
+
+  "url" : "something",
+  "ftp" : {
+    "hose" : "hostname",
+    "username" : "username",
+    "password" : "password"
+    }
+  }
+}
