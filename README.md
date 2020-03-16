@@ -45,7 +45,7 @@ pip3 install requirements.txt
 $ python3 nuntius.py
 ```
 
-### Upcoming features
+## Upcoming features
 - [ ] Automate the config process.
 - [ ] Log the sent emails.
 - [ ] Upload files directly via ftp.
