@@ -15,3 +15,4 @@ def connect(url,mydata) :
 
 def send(req) :
     msg=ul.request.urlopen(req).read()
+    return msg

@@ -18,7 +18,7 @@ Send email to anyone from anyone.
 - Replace the "someurl" with your own url
 ```json
 {
-  "isConfigured" : "True";
+  "isConfigured" : "True",
 
   "url" : "https://test.com/",
   "ftp" : {
