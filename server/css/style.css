@@ -42,6 +42,10 @@ label {
     font-family: monospace;
 }
 
+.link {
+    color: white;
+}
+
 button[type=submit] {
     display: inline-block;
     padding: 15px 25px;
@@ -66,3 +70,39 @@ button[type=submit]:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+
+.status {
+    padding: 20px;
+    color: white;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 30px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
+  .empty {
+    background-color: #51A9F5;
+  }
+
+  .error {
+    background-color: #FFAA46;
+  }
+
+  .success {
+    background-color: #6FBD6F;
+  }
+
+  .failed {
+    background-color: #f44336;
+  }
