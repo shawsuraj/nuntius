@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#Version - v2.0.1
+#Version - v2.0.2
 
 import argparse
 import sys
