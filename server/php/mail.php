@@ -1,13 +1,13 @@
 <?php
 
-function isValid() {
-  if (checkEmail($_POST['fromemail']) &&
-      checkEmail($_POST['toemail']) &&
-      checkString($_POST['subject']) &&
-      strlen($_POST['body']) > 0) {
+function isValid($from_email, $to_email, $subject, $body) {
+  if ((checkEmail($from_email) && filter_var($from_email, FILTER_VALIDATE_EMAIL)) &&
+      (checkEmail($to_email) && filter_var($to_email, FILTER_VALIDATE_EMAIL)) &&
+      checkString($subject) &&
+      strlen($body) > 0) {
         return true;
       }
-      
+
   return false;
 }
 
@@ -27,7 +27,7 @@ function checkString($string) {
   return true;
 }
 
-function sendMail($from_email, $to_email, $subject, $content) {
+function sendMail($from_email, $to_email, $subject, $body) {
   try {
     $headers = "" .
     "From: ".$from_email."\r\n".
@@ -35,32 +35,43 @@ function sendMail($from_email, $to_email, $subject, $content) {
     "X-Mailer: PHP/" . phpversion();
     $headers .= 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-    @mail($to_email, $subject, $content, $headers);
-    
-    return "Sent Succesfuly";
-  } 
-  catch (Exception $e) { 
-    return "Error Occured";
+    @mail($to_email, $subject, $body, $headers);
+
+    return true;
+  }
+  catch (Exception $e) {
+    return false;
   }
 }
 
-function alert($message) {
-  echo '<script type="text/javascript">';
-  echo ' alert('.$message.')';  //not showing an alert box.
-  echo '</script>';
+if (isset($_POST['submit'])) {
 
-}
-
-// Start
-
-if (isValid()) {
+  // get data from the form
   $from_email = $_POST['fromemail']; // required
   $to_email = $_POST['toemail'];  // required
   $subject = $_POST['subject'];
-  $content = $_POST['body'];  // required
+  $body = $_POST['body'];  // required
 
-  $message = sendMail($from_email, $to_email, $subject, $content);
-  alert($message);
-  exit();
+  // check if input is empty
+  if (empty($from_email) || empty($to_email) || empty($body)) {
+    header("Location: ../index.php?status=empty");
+    exit();
+  } else {
+    // check if input characters are valid
+    if(!isValid($from_email, $to_email, $subject, $body)){
+      header("Location: ../index.php?status=error");
+      exit();
+    } else {
+      // send the mail
+      if (sendMail($from_email, $to_email, $subject, $body)) {
+        header("Location: ../index.php?status=success");
+        exit();
+      } else {
+        header("Location: ../index.php?status=failed");
+        exit();
+      }
+    }
+  }
 }
+
 ?>
