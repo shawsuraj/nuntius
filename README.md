@@ -18,7 +18,7 @@ The author takes no responsibility for any misuse of this code. Unauthorized use
 Users are responsible for ensuring compliance with applicable laws in their jurisdiction, such as the CAN-SPAM Act, GDPR, and others.
 
 ## License
-This project is licensed under the MIT License with additional clauses prohibiting malicious use. Please see the [LICENSE](LICENSE.md) file for details.
+This project is licensed under the MIT License with additional clauses prohibiting malicious use. Please see the [LICENSE](LICENSE) file for details.
 
 ## Note
 
