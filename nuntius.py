@@ -8,20 +8,22 @@ from Defs.mail_input_data import getMailInput
 from Defs.email_handler import EmailHandler
 from Defs.startServer import start_ngrok_server
 from Defs.startServer import start_serveo_server
+from Defs.startServer import start_locahostrun_server
 
 verify_connection()
 
 if __name__ == "__main__" :
+    
     try : 
         start_menu()
         port = port_selector()
         
+        print (port)
         
         frm, to, subject, body = getMailInput()
 
         # start_server()
-        url = start_serveo_server(port)
-        print("check here")
+        url = start_locahostrun_server(port)
         email_handler = EmailHandler(url)
 
 

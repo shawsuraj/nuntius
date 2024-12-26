@@ -10,10 +10,17 @@ class EmailHandler :
             "to": to,
             "subject": subject,
             "body": body,
+            "submit": "send"
         }
 
         try :
-            response = requests.post(self.php_url, data=data)
-            return response.txt
+            response = requests.post(self.php_url, 
+                                     data=data, 
+                                     timeout = 10)
+            
+            response.raise_for_status()
+
+            return response.text
+        
         except Exception as e :
             return "Failed to send email: {}".format(e)

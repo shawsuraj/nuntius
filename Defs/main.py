@@ -31,9 +31,10 @@ def start_menu() :
         start_menu()
 
 def start_spoof() :
-    os.system("chmod -R 777 Server")
-    renewDir("Server/www")
-    copyfile("WebServer/php/mail.php", "Server/www/mail.php")
+    pass
+    # os.system("chmod -R 777 Server")
+    # renewDir("Server/www")
+    # copyfile("WebServer/php/mail.php", "Server/www/mail.php")
 
 def port_selector() :
     print("\nEnter a port number between 1-65535, eg : 8080, 1337")
