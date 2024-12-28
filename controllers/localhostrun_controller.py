@@ -51,7 +51,7 @@ class LocalhostRunController :
                     print("localhost.run public URL: {}".format(self.public_url))
                     break
 
-            print(self.public_url)
+            # print(self.public_url)
 
         except Exception as e :
             print("Failed to start localhost.run tunner: {}".format(e))

@@ -19,6 +19,11 @@ function checkString($string) {
     return preg_match($string_regex, $string) === 1;
 }
 
+
+# Update -> @mail probably won't ost email providers have spam 
+# filters, SPF, DKIM, and DMARC in place to identify and block spoofed emails, 
+# thus, the email may not arrive in the inbox.
+
 function sendMail($from_email, $to_email, $subject, $body) {
     $headers = "From: $from_email\r\n" .
                "Reply-To: $from_email\r\n" .
@@ -55,3 +60,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Failed to send email.";
     }
 }
+?>

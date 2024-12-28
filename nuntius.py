@@ -18,17 +18,22 @@ if __name__ == "__main__" :
         start_menu()
         port = port_selector()
         
-        print (port)
+        # print (port)
         
-        frm, to, subject, body = getMailInput()
+        frm, to, subject, body = getMailInput() # Get email inputs
 
         # start_server()
         url = start_locahostrun_server(port)
+
         email_handler = EmailHandler(url)
-
-
         response = email_handler.send_email(frm, to, subject, body)
+
         print("PHP response: {}".format(response))
+
+        if "sent successfully" in response.lower():
+            print ("\033[92mEmail sent successfully\033[0m") # Green
+        else:
+             print ("\033[91mEmail failed to send\033[0m") # Red
 
         print("Press Ctrl+C to exit...")
 

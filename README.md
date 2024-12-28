@@ -2,8 +2,12 @@
 
 Nuntius allows users to explore email spoofing concepts by sending emails from any email ID to any email ID using a simple web interface and backend PHP.
 
-Update - 
-Tunneling support for exposing localhost via Serveo.
+## Update - 
+
+Temporary depricated the project due to have spam filters, SPF, DKIM, and DMARC in place to identify and block spoofed emails, thus, the email may not arrive in the inbox. So @mail function in php will not work, 
+
+Will try to find out new method like trying to spoof authrised server or something. Will be back soon!
+
 
 <!-- <a href="https://github.com/shawsuraj/nuntius/releases">
     <img title="GitHub version" src="https://img.shields.io/badge/Version-v2.0.2-brightgreen" >
